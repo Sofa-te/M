@@ -52,6 +52,87 @@ nav ul{gap:15px}nav a{font-size:14px}
 .hero h1{font-size:2.5rem}.hero p{font-size:1.1rem}
 section{padding:65px 20px}
 }
+
+/* Premium mobile hamburger menu */
+.hamburger{display:none;background:transparent;border:0;padding:9px;cursor:pointer;width:48px;height:48px;position:relative;z-index:1002}
+.hamburger span{display:block;width:27px;height:2px;margin:6px auto;background:#f4c542;border-radius:5px;transition:.35s ease;box-shadow:0 0 8px rgba(244,197,66,.35)}
+.mobile-menu{display:none}
+.menu-backdrop{display:none}
+@media(max-width:768px){
+  .nav-links{display:none!important}
+  .hamburger{display:block}
+  .mobile-menu{
+    display:block;position:fixed;top:0;right:-100%;width:min(330px,86vw);height:100vh;
+    background:linear-gradient(165deg,#090909,#171717 70%,#050505);
+    border-left:1px solid rgba(244,197,66,.38);z-index:1001;
+    padding:92px 22px 28px;box-shadow:-18px 0 55px rgba(0,0,0,.65);
+    transition:right .38s cubic-bezier(.22,.8,.2,1);overflow-y:auto
+  }
+  .mobile-menu.open{right:0}
+  .menu-title{color:#f4c542;font:700 21px Georgia,serif;letter-spacing:.4px;margin:0 0 8px;text-shadow:0 0 12px rgba(244,197,66,.35)}
+  .menu-line{height:1px;background:linear-gradient(90deg,#f4c542,transparent);margin:12px 0 22px}
+  .mobile-menu a{
+    display:flex;align-items:center;gap:13px;text-decoration:none;color:#f2f2f2;
+    padding:15px 14px;margin:7px 0;border:1px solid transparent;border-radius:13px;
+    transition:.25s ease;font-weight:600
+  }
+  .mobile-menu a:hover,.mobile-menu a:active{
+    color:#f4c542;background:rgba(244,197,66,.08);border-color:rgba(244,197,66,.25);
+    transform:translateX(-3px)
+  }
+  .mobile-menu .menu-icon{width:25px;text-align:center;color:#f4c542;font-size:18px}
+  .mobile-menu .book-link{margin-top:16px;background:linear-gradient(90deg,#d8a900,#ffe071);color:#080808;border:0;justify-content:center;font-weight:800}
+  .mobile-menu .book-link .menu-icon{color:#080808}
+  .menu-footer{margin-top:28px;color:#888;font-size:12px;line-height:1.6;text-align:center}
+  .menu-backdrop{
+    display:block;position:fixed;inset:0;background:rgba(0,0,0,.58);backdrop-filter:blur(3px);
+    z-index:1000;opacity:0;visibility:hidden;transition:.3s ease
+  }
+  .menu-backdrop.show{opacity:1;visibility:visible}
+  .hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .hamburger.active span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  body.menu-open{overflow:hidden}
+}
+
+
+/* Premium Real Gold Branding */
+.logo{
+  font-size:clamp(32px,6vw,54px)!important;
+  font-weight:800!important;
+  letter-spacing:.3px;
+  background:linear-gradient(180deg,#fff3a6 0%,#ffe27a 18%,#d4a72c 48%,#fff0a0 68%,#b8860b 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:#d4af37;
+  text-shadow:0 2px 10px rgba(212,175,55,.22),0 0 18px rgba(255,215,80,.16);
+}
+@media(max-width:768px){
+  .logo{
+    font-size:clamp(25px,7vw,36px)!important;
+    line-height:1.08;
+    max-width:78%;
+    text-align:left;
+    margin-left:0;
+  }
+  header{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:12px;
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  header .sub{
+    display:none;
+  }
+  .hamburger{
+    margin-left:auto!important;
+    flex:0 0 48px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -65,6 +146,9 @@ section{padding:65px 20px}
     <li><a href="#contact">Contact</a></li>
     <li><a href="appointment.html">Book Appointment</a></li>
   </ul>
+<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+  <span></span><span></span><span></span>
+</button>
 </nav>
 
 <section id="home" class="hero">
@@ -124,5 +208,41 @@ section{padding:65px 20px}
 
 <footer>© 2026 Mohammed Ahmed Eshetu — Consultant and Attorney at Law. All rights reserved.</footer>
 
+
+<div class="menu-backdrop" id="menuBackdrop"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="menu-title">Lawyer Mohammed Ahmed Eshetu</div>
+  <div class="menu-line"></div>
+  <a href="#home"><span class="menu-icon">⌂</span>Home</a>
+  <a href="#about"><span class="menu-icon">♙</span>About</a>
+  <a href="#details"><span class="menu-icon">✦</span>Details</a>
+  <a href="#contact"><span class="menu-icon">✉</span>Contact</a>
+  <a class="book-link" href="appointment.html"><span class="menu-icon">▣</span>Book Appointment</a>
+  <div class="menu-footer">LLB, LLM • Consultant and Attorney at Law<br>Professional Legal Services</div>
+</aside>
+
+<script>
+(function(){
+  const btn=document.getElementById('hamburger');
+  const menu=document.getElementById('mobileMenu');
+  const back=document.getElementById('menuBackdrop');
+  if(!btn||!menu||!back) return;
+  function closeMenu(){
+    btn.classList.remove('active'); btn.setAttribute('aria-expanded','false');
+    menu.classList.remove('open'); menu.setAttribute('aria-hidden','true');
+    back.classList.remove('show'); document.body.classList.remove('menu-open');
+  }
+  function toggleMenu(){
+    const open=!menu.classList.contains('open');
+    btn.classList.toggle('active',open); btn.setAttribute('aria-expanded',String(open));
+    menu.classList.toggle('open',open); menu.setAttribute('aria-hidden',String(!open));
+    back.classList.toggle('show',open); document.body.classList.toggle('menu-open',open);
+  }
+  btn.addEventListener('click',toggleMenu);
+  back.addEventListener('click',closeMenu);
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape') closeMenu();});
+})();
+</script>
 </body>
 </html>
