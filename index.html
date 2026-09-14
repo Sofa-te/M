@@ -1,55 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammed Ahmed Eshetu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Services | Mohammed Ahmed Eshetu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#222;background:#f7f4ed;line-height:1.6}
+nav{position:fixed;top:0;left:0;width:100%;z-index:100;
+background:rgba(15,15,15,.96);padding:14px 20px;text-align:center}
+.logo{color:#dfb85a;font-size:22px;font-weight:700;margin-bottom:12px}
+nav ul{list-style:none;display:flex;justify-content:center;gap:25px}
+nav a{color:#fff;text-decoration:none;font-size:16px;font-weight:700}
+nav a:hover{color:#dfb85a}
+
+.hero{min-height:100vh;padding:150px 20px 70px;display:flex;align-items:center;
+justify-content:center;text-align:center;color:#fff;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("legal-background.png") center center/cover no-repeat}
+.hero-content{max-width:800px}
+.hero h1{font-size:clamp(2.2rem,7vw,4.5rem);line-height:1.12;margin-bottom:22px}
+.hero p{font-size:clamp(1.05rem,3.5vw,1.45rem);margin-bottom:32px}
+.btn{display:inline-block;background:#dfb85a;color:#111;text-decoration:none;
+padding:14px 30px;border-radius:7px;font-weight:700}
+section{padding:80px 7%}
+.title{text-align:center;color:#8a6a2d;font-size:2.1rem;margin-bottom:30px}
+.about{text-align:center;max-width:850px;margin:auto}
+.about p{margin:12px 0}
+.cards{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.card{width:270px;background:#fff;padding:25px;border-radius:9px;
+box-shadow:0 5px 18px rgba(0,0,0,.10);text-align:center}
+.card h3{color:#8a6a2d;margin-bottom:10px}
+.contact{background:#222;color:#fff;text-align:center}
+.contact .title{color:#dfb85a}
+.contact p{margin:10px}
+.contact a{color:#dfb85a;text-decoration:none}
+.details{text-align:center;max-width:850px;margin:auto}
+footer{background:#111;color:#aaa;text-align:center;padding:22px;font-size:14px}
+
+@media(max-width:600px){
+nav{padding:12px 8px}.logo{font-size:19px;margin-bottom:9px}
+nav ul{gap:15px}nav a{font-size:14px}
+.hero{min-height:calc(100vh - 95px);padding-top:145px}
+.hero h1{font-size:2.5rem}.hero p{font-size:1.1rem}
+section{padding:65px 20px}
+}
+</style>
 </head>
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#details">Details</a>
-  </nav>
+<nav>
+  <div class="logo">LEGAL SERVICES</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#details">Details</a></li>
+  </ul>
+</nav>
 
-  <section id="home">
-    <h1>Mohammed Ahmed Eshetu</h1>
-    <h2>LLB, LLM</h2>
-    <h3>CONSULTANT AND ATTORNEY AT LAW</h3>
-    <p>Professional legal consultation, advice and representation.</p>
-  </section>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Professional Legal Services</h1>
+    <p>Trusted legal advice and professional representation for your needs.</p>
+    <a class="btn" href="#contact">Contact Us</a>
+  </div>
+</section>
 
-  <section id="about">
-    <h2>About</h2>
+<section id="about">
+  <h2 class="title">About Us</h2>
+  <div class="about">
+    <p><strong>Mohammed Ahmed Eshetu</strong></p>
+    <p><strong>LLB, LLM</strong></p>
+    <p><strong>Consultant and Attorney at Law</strong></p>
+    <p>Professional legal consultation, advice and representation with integrity, confidentiality and dedication.</p>
+  </div>
+</section>
+
+<section class="services">
+  <h2 class="title">Legal Services</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Experienced Advice</h3>
+      <p>Clear and practical legal guidance for individuals and businesses.</p>
+    </div>
+    <div class="card">
+      <h3>Trusted Service</h3>
+      <p>Professional support focused on your rights and interests.</p>
+    </div>
+    <div class="card">
+      <h3>Legal Representation</h3>
+      <p>Dedicated representation and assistance throughout your legal matter.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="title">Contact</h2>
+  <p>Email: <a href="mailto:muhe.dcst62@gmail.com">muhe.dcst62@gmail.com</a></p>
+  <p>Phone: <a href="tel:+251912704173">0912-704173</a></p>
+  <p>Phone: <a href="tel:+251977602663">0977-602663</a></p>
+  <p>Address: Addis Ababa, Ethiopia</p>
+</section>
+
+<section id="details">
+  <h2 class="title">Details</h2>
+  <div class="details">
     <p><strong>Name:</strong> Mohammed Ahmed Eshetu</p>
     <p><strong>Qualification:</strong> LLB, LLM</p>
     <p><strong>Profession:</strong> Consultant and Attorney at Law</p>
     <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
-  </section>
+    <p>Professional legal consultation, advice and representation.</p>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Email:
-      <a href="mailto:muhe.dcst62@gmail.com">muhe.dcst62@gmail.com</a>
-    </p>
-    <p>
-      Phone:
-      <a href="tel:+251912704173">0912-704173</a>
-    </p>
-    <p>
-      Phone:
-      <a href="tel:+251977602663">0977-602663</a>
-    </p>
-    <p>Address: Addis Ababa, Ethiopia</p>
-  </section>
-
-  <section id="details">
-    <h2>Details</h2>
-    <p>Professional legal consultation and representation.</p>
-  </section>
+<footer>© 2026 Mohammed Ahmed Eshetu — Consultant and Attorney at Law. All rights reserved.</footer>
 
 </body>
 </html>
