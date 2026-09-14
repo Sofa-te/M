@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Legal Services</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#222;line-height:1.6}
+nav{position:fixed;top:0;left:0;width:100%;z-index:10;background:rgba(20,20,20,.94);display:flex;align-items:center;justify-content:space-between;padding:15px 7%}
+.logo{color:#d8b35a;font-size:22px;font-weight:bold}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:white;text-decoration:none;font-weight:bold}
+nav a:hover{color:#d8b35a}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:90px 20px 40px;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("legal-photo.png") center/cover no-repeat}
+.hero h1{font-size:clamp(2.3rem,8vw,5rem);margin-bottom:18px}
+.hero p{font-size:1.25rem;margin-bottom:28px}
+.btn{display:inline-block;padding:13px 28px;background:#d8b35a;color:#111;text-decoration:none;border-radius:5px;font-weight:bold}
+section{padding:90px 8%;text-align:center}
+section h2{font-size:2.2rem;margin-bottom:25px;color:#8a6825}
+.about{background:#f7f4ed}
+.cards{display:flex;gap:25px;justify-content:center;flex-wrap:wrap;margin-top:35px}
+.card{max-width:320px;padding:28px;background:white;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.card h3{margin-bottom:12px;color:#8a6825}
+.contact{background:#222;color:white}
+footer{text-align:center;background:#111;color:#aaa;padding:20px}
+@media(max-width:650px){
+nav{padding:12px 4%;flex-direction:column;gap:10px}
+nav ul{gap:13px;flex-wrap:wrap;justify-content:center}
+.hero{padding-top:120px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">LEGAL SERVICES</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#details">Details</a></li>
+  </ul>
+</nav>
+
+<section id="home" class="hero">
+  <div>
+    <h1>Professional Legal Services</h1>
+    <p>Trusted legal advice and professional representation for your needs.</p>
+    <a class="btn" href="#contact">Contact Us</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>We provide professional legal guidance with integrity, confidentiality and dedication.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Experienced Advice</h3>
+      <p>Clear and practical legal guidance for individuals and businesses.</p>
+    </div>
+    <div class="card">
+      <h3>Trusted Service</h3>
+      <p>Professional support focused on your rights and interests.</p>
+    </div>
+    <div class="card">
+      <h3>Legal Representation</h3>
+      <p>Dedicated representation and assistance throughout your legal matter.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: info@example.com</p>
+  <p>Phone: +251 900 000 000</p>
+  <p>Address: Addis Ababa, Ethiopia</p>
+</section>
+
+<section id="details">
+  <h2>Details</h2>
+  <p>Our services can include legal consultation, document preparation, contract review and legal representation.</p>
+</section>
+
+<footer>© 2026 Professional Legal Services. All rights reserved.</footer>
+
+</body>
+</html>
