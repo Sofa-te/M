@@ -3,60 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#171717">
 <title>Lawyer Mohammed Ahmed Eshetu</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,sans-serif;background:#000;color:#fff;overflow-x:hidden}
-.topbar{height:76px;position:fixed;top:0;left:0;right:0;z-index:5000;background:#171717;border-bottom:1px solid #444;display:flex;align-items:center;padding:0 28px;gap:30px}
-.logo{font-size:27px;font-weight:800;color:#d8d8d8;white-space:nowrap}.desktop-nav{margin-left:auto;display:flex;gap:28px}.desktop-nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px}.desktop-nav a:hover{color:#f4cf61}
-.hamburger{display:none;margin-left:auto;width:54px;height:54px;border:1px solid #777;border-radius:12px;background:#3a3a3a;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;box-shadow:0 0 10px rgba(255,255,255,.12)}
-.hamburger span{width:30px;height:3px;background:#d5d5d5;border-radius:4px;transition:.25s}.hamburger.active{border-color:#777}.hamburger.active span:nth-child(1){transform:translateY(8px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#000;color:#fff;overflow-x:hidden}
+
+/* HEADER */
+.topbar{height:66px;position:fixed;top:0;left:0;right:0;z-index:5000;background:rgba(18,18,18,.97);border-bottom:1px solid #444;display:flex;align-items:center;padding:0 22px;gap:20px}
+.logo{font-size:22px;font-weight:800;white-space:nowrap;color:#f5d76e;text-shadow:0 0 4px rgba(255,230,130,.45),0 0 12px rgba(245,215,110,.25)}
+.desktop-nav{margin-left:auto;display:flex;gap:25px}
+.desktop-nav a{color:#fff;text-decoration:none;font-weight:700;font-size:15px;transition:.2s}
+.desktop-nav a:hover{color:#f5d76e}
+
+/* GOLD HAMBURGER ONLY */
+.hamburger{display:none;margin-left:auto;width:54px;height:54px;border:1px solid #d9b83f;border-radius:13px;background:#252525;align-items:center;justify-content:center;flex-direction:column;gap:6px;cursor:pointer;box-shadow:0 0 8px rgba(245,215,110,.22),inset 0 0 8px rgba(245,215,110,.08)}
+.hamburger span{width:29px;height:3px;background:#f5d76e;border-radius:5px;transition:.25s;box-shadow:0 0 7px rgba(245,215,110,.55)}
+.hamburger.active span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+
+/* MOBILE MENU: TRANSPARENT / HALF SCREEN / SLIDE DOWN */
 .mobile-menu{display:none}
-.hero{margin-top:76px;height:500px;background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.65)),url('legal-background.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}.hero-content{transform:translateY(-35px);max-width:800px}.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.1;margin-bottom:20px}.hero p{font-size:clamp(1rem,3vw,1.3rem);margin-bottom:28px}.btn{display:inline-block;padding:15px 32px;border-radius:10px;background:linear-gradient(110deg,#c99622,#ffe27a,#d7aa38);color:#111;text-decoration:none;font-size:18px;font-weight:800}
-section{padding:70px 7%}.title{text-align:center;font-size:2.3rem;margin-bottom:28px;color:#f5d76e;text-shadow:0 0 12px rgba(245,215,110,.5)}
-#about{min-height:540px;text-align:center;background:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.65)),url('justice-background.jpg') center 20%/cover no-repeat;color:#f5d76e}.about-box{max-width:850px;margin:auto;padding:30px 22px;border:1px solid rgba(245,215,110,.4);border-radius:18px;background:rgba(0,0,0,.4)}.about-box p{margin:11px 0}
-.services{background:#000;color:#f5d76e}.cards{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}.card{width:280px;padding:28px 22px;text-align:center;border:1px solid #f5d76e;border-radius:12px;background:#050505;box-shadow:0 0 15px rgba(245,215,110,.14)}.card h3{margin-bottom:12px}.details{text-align:center}.details p{margin:7px}.contact{background:#222;text-align:center}.contact p{margin:9px}.contact a{color:#f5d76e;text-decoration:none}footer{text-align:center;background:#111;color:#aaa;padding:22px}
+
+/* HERO */
+.hero{margin-top:66px;height:500px;background:linear-gradient(rgba(0,0,0,.46),rgba(0,0,0,.64)),url('legal-background.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+.hero-content{transform:translateY(-25px);max-width:800px}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.1;margin-bottom:20px}
+.hero p{font-size:clamp(1rem,3vw,1.3rem);margin-bottom:28px}
+.btn{display:inline-block;padding:15px 32px;border-radius:11px;background:linear-gradient(110deg,#c99622,#ffe27a,#d7aa38);color:#111;text-decoration:none;font-size:18px;font-weight:800;box-shadow:0 5px 18px rgba(0,0,0,.35);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(245,215,110,.3)}
+
+section{padding:70px 7%}
+.title{text-align:center;font-size:2.3rem;margin-bottom:28px;color:#f5d76e;text-shadow:0 0 12px rgba(245,215,110,.5)}
+#about{min-height:540px;text-align:center;background:linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.68)),url('justice-background.jpg') center 20%/cover no-repeat;color:#f5d76e}
+.about-box{max-width:850px;margin:auto;padding:30px 22px;border:1px solid rgba(245,215,110,.42);border-radius:18px;background:rgba(0,0,0,.43);backdrop-filter:blur(2px)}
+.about-box p{margin:11px 0}
+.services{background:#000;color:#f5d76e}
+.cards{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.card{width:280px;padding:28px 22px;text-align:center;border:1px solid #f5d76e;border-radius:12px;background:#050505;box-shadow:0 0 15px rgba(245,215,110,.14)}
+.card h3{margin-bottom:12px}
+.details{text-align:center}.details p{margin:7px}
+.contact{background:#222;text-align:center}.contact p{margin:9px}.contact a{color:#f5d76e;text-decoration:none}
+footer{text-align:center;background:#111;color:#aaa;padding:22px}
+
 @media(max-width:768px){
-.topbar{height:66px;padding:0 14px 0 18px;gap:10px}.logo{font-size:17px;max-width:calc(100% - 65px);overflow:hidden;text-overflow:ellipsis}.desktop-nav{display:none}.hamburger{display:flex}
-/* simple half-height dropdown: closed = zero, open = visible */
-.mobile-menu{display:block;position:fixed;left:0;right:0;top:66px;z-index:4900;max-height:0;overflow:hidden;background:#3b3b3b;color:#fff;border-bottom:1px solid #666;box-shadow:0 12px 30px rgba(0,0,0,.55);transition:max-height .32s ease}
-.mobile-menu.open{max-height:55vh;overflow-y:auto}
-.menu-inner{padding:12px 18px 18px}.menu-handle{width:42px;height:4px;border-radius:5px;background:#aaa;margin:0 auto 10px}.menu-heading{text-align:center;color:#eee;font-size:17px;font-weight:800;padding:4px 0 12px;border-bottom:1px solid #555}
-.mobile-menu a{display:flex;align-items:center;gap:13px;min-height:50px;color:#fff;text-decoration:none;font-weight:700;font-size:17px;border-bottom:1px solid #555}.mobile-menu a:active{background:#444}.icon{width:28px;text-align:center;color:#f5d76e;font-size:22px}.book{margin-top:12px!important;justify-content:center;border:1px solid #aaa!important;border-radius:9px;background:#555}.book .icon{color:#f5d76e}.lang{display:flex;justify-content:center;gap:4px;margin:14px auto 4px;padding:3px;background:#303030;border:1px solid #666;border-radius:22px;width:max-content}.lang button{border:0;background:transparent;color:#ccc;font-weight:800;padding:7px 20px;border-radius:18px}.lang button.active{background:#666;color:#fff}
-.hero{margin-top:66px;height:500px}.hero-content{transform:translateY(-40px)}.hero h1{font-size:2.25rem}.hero p{font-size:1.05rem}.btn{font-size:16px;padding:14px 27px}section{padding:55px 18px}.title{font-size:2.15rem}#about{min-height:520px}.cards{gap:18px}.card{width:min(100%,330px)}
+  .topbar{height:66px;padding:0 12px 0 16px;gap:8px}
+  .logo{font-size:17px;max-width:calc(100% - 70px);overflow:hidden;text-overflow:ellipsis;color:#f5d76e;text-shadow:0 0 5px rgba(245,215,110,.55),0 0 12px rgba(245,215,110,.25)}
+  .desktop-nav{display:none}
+  .hamburger{display:flex}
+
+  /* This menu is intentionally NOT full screen. It is transparent and about half-height. */
+  .mobile-menu{display:block;position:fixed;left:0;right:0;top:66px;z-index:4900;max-height:0;overflow:hidden;background:rgba(55,55,55,.78);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);border-bottom:1px solid rgba(245,215,110,.30);box-shadow:0 12px 30px rgba(0,0,0,.45);transition:max-height .38s ease,opacity .25s ease;opacity:0}
+  .mobile-menu.open{max-height:50vh;overflow-y:auto;opacity:1}
+  .menu-inner{padding:10px 18px 15px}
+  .menu-handle{width:42px;height:4px;border-radius:5px;background:#cfcfcf;margin:0 auto 9px}
+  .menu-heading{text-align:center;color:#f5d76e;font-size:17px;font-weight:800;padding:3px 0 11px;border-bottom:1px solid rgba(255,255,255,.18);text-shadow:0 0 8px rgba(245,215,110,.35)}
+  .mobile-menu a{display:flex;align-items:center;gap:13px;min-height:52px;color:#fff;text-decoration:none;font-weight:700;font-size:17px;border-bottom:1px solid rgba(255,255,255,.16);transition:.18s}
+  .mobile-menu a:active{background:rgba(255,255,255,.10)}
+  .icon{width:28px;text-align:center;color:#f5d76e;font-size:22px;text-shadow:0 0 8px rgba(245,215,110,.45)}
+  .book{margin-top:12px!important;justify-content:center;border:1px solid rgba(245,215,110,.65)!important;border-radius:9px;background:rgba(255,255,255,.08);color:#fff!important}
+  .book .icon{color:#f5d76e}
+  .lang{display:flex;justify-content:center;gap:4px;margin:13px auto 3px;padding:3px;background:rgba(20,20,20,.45);border:1px solid rgba(255,255,255,.24);border-radius:22px;width:max-content}
+  .lang button{border:0;background:transparent;color:#ddd;font-weight:800;padding:7px 19px;border-radius:18px}
+  .lang button.active{background:rgba(255,255,255,.28);color:#fff}
+
+  .hero{margin-top:66px;height:500px}
+  .hero-content{transform:translateY(-35px)}
+  .hero h1{font-size:2.2rem}
+  .hero p{font-size:1.02rem}
+  .btn{font-size:16px;padding:14px 27px}
+  section{padding:55px 18px}
+  .title{font-size:2.15rem}
+  #about{min-height:520px}
+  .cards{gap:18px}
+  .card{width:min(100%,330px)}
 }
 @media(min-width:769px){.mobile-menu{display:none!important}}
 </style>
 </head>
 <body>
 <header class="topbar">
-<div class="logo">Lawyer Mohammed Ahmed Eshetu</div>
-<nav class="desktop-nav"><a href="#home">Home</a><a href="#about">About</a><a href="#details">Details</a><a href="#contact">Contact</a><a href="appointment.html">Book Appointment</a></nav>
-<button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="logo">Lawyer Mohammed Ahmed Eshetu</div>
+  <nav class="desktop-nav"><a href="#home">Home</a><a href="#about">About</a><a href="#details">Details</a><a href="#contact">Contact</a><a href="appointment.html">Book Appointment</a></nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true"><div class="menu-inner">
-<div class="menu-handle"></div><div class="menu-heading">Lawyer Mohammed Ahmed Eshetu</div>
-<a href="#home"><span class="icon">⌂</span><span data-en="Home" data-am="መነሻ">Home</span></a>
-<a href="#about"><span class="icon">♙</span><span data-en="About" data-am="ስለ እኛ">About</span></a>
-<a href="#details"><span class="icon">✦</span><span data-en="Details" data-am="ዝርዝር">Details</span></a>
-<a href="#contact"><span class="icon">☎</span><span data-en="Contact" data-am="ያግኙን">Contact</span></a>
-<a class="book" href="appointment.html"><span class="icon">▣</span><span data-en="Book Appointment" data-am="ቀጠሮ ይያዙ">Book Appointment</span></a>
-<div class="lang"><button id="enBtn" class="active">EN</button><button id="amBtn">አማ</button></div>
-</div></div>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="menu-inner">
+    <div class="menu-handle"></div>
+    <div class="menu-heading">Lawyer Mohammed Ahmed Eshetu</div>
+    <a href="#home"><span class="icon">⌂</span><span data-en="Home" data-am="መነሻ">Home</span></a>
+    <a href="#about"><span class="icon">♙</span><span data-en="About" data-am="ስለ እኛ">About</span></a>
+    <a href="#details"><span class="icon">✦</span><span data-en="Details" data-am="ዝርዝር">Details</span></a>
+    <a href="#contact"><span class="icon">☎</span><span data-en="Contact" data-am="ያግኙን">Contact</span></a>
+    <a class="book" href="appointment.html"><span class="icon">▣</span><span data-en="Book Appointment" data-am="ቀጠሮ ይያዙ">Book Appointment</span></a>
+    <div class="lang"><button id="enBtn" class="active">EN</button><button id="amBtn">አማ</button></div>
+  </div>
+</div>
 
 <section id="home" class="hero"><div class="hero-content"><h1 data-en="Professional Legal Services" data-am="የሙያ የሕግ አገልግሎቶች">Professional Legal Services</h1><p data-en="Trusted legal advice and professional representation for your needs." data-am="ታማኝ የሕግ ምክር እና ሙያዊ ውክልና ለፍላጎትዎ።">Trusted legal advice and professional representation for your needs.</p><a class="btn" href="appointment.html" data-en="Book an Appointment" data-am="ቀጠሮ ይያዙ">Book an Appointment</a></div></section>
+
 <section id="about"><h2 class="title" data-en="About Us" data-am="ስለ እኛ">About Us</h2><div class="about-box"><p><strong>Mohammed Ahmed Eshetu</strong></p><p><strong>LLB, LLM</strong></p><p><strong data-en="Consultant and Attorney at Law" data-am="የሕግ አማካሪ እና ጠበቃ">Consultant and Attorney at Law</strong></p><p data-en="Professional legal consultation, advice and representation with integrity, confidentiality and dedication." data-am="በታማኝነት፣ በምስጢራዊነት እና በትጋት የሚሰጥ ሙያዊ የሕግ ምክር፣ ምክክር እና ውክልና።">Professional legal consultation, advice and representation with integrity, confidentiality and dedication.</p></div></section>
+
 <section class="services"><h2 class="title" data-en="Legal Services" data-am="የሕግ አገልግሎቶች">Legal Services</h2><div class="cards"><div class="card"><h3 data-en="Experienced Advice" data-am="ልምድ ያለው ምክር">Experienced Advice</h3><p data-en="Clear and practical legal guidance for individuals and businesses." data-am="ለግለሰቦች እና ለንግዶች ግልጽ እና ተግባራዊ የሕግ መመሪያ።">Clear and practical legal guidance for individuals and businesses.</p></div><div class="card"><h3 data-en="Trusted Service" data-am="ታማኝ አገልግሎት">Trusted Service</h3><p data-en="Professional support focused on your rights and interests." data-am="በመብቶችዎ እና ጥቅሞችዎ ላይ ያተኮረ ሙያዊ ድጋፍ።">Professional support focused on your rights and interests.</p></div><div class="card"><h3 data-en="Legal Representation" data-am="የሕግ ውክልና">Legal Representation</h3><p data-en="Dedicated representation and assistance throughout your legal matter." data-am="በሕጋዊ ጉዳይዎ ሁሉ የተሟላ ውክልና እና ድጋፍ።">Dedicated representation and assistance throughout your legal matter.</p></div></div></section>
+
 <section id="details"><h2 class="title" data-en="Details" data-am="ዝርዝር">Details</h2><div class="details"><p>Name: Mohammed Ahmed Eshetu</p><p>Qualification: LLB, LLM</p><p>Profession: Consultant and Attorney at Law</p><p>Location: Addis Ababa, Ethiopia</p></div></section>
+
 <section id="contact" class="contact"><h2 class="title" data-en="Contact" data-am="ያግኙን">Contact</h2><p>Email: <a href="mailto:muhe.dcst62@gmail.com">muhe.dcst62@gmail.com</a></p><p>Phone: <a href="tel:+251912704173">0912-704173</a></p><p>Phone: <a href="tel:+251977602663">0977-602663</a></p></section>
 <footer>© 2026 Mohammed Ahmed Eshetu — Consultant and Attorney at Law.</footer>
+
 <script>
-const hamburger=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu');
-function setMenu(open){hamburger.classList.toggle('active',open);hamburger.setAttribute('aria-expanded',String(open));menu.classList.toggle('open',open);menu.setAttribute('aria-hidden',String(!open));}
+const hamburger=document.getElementById('hamburger');
+const menu=document.getElementById('mobileMenu');
+function setMenu(open){
+  hamburger.classList.toggle('active',open);
+  hamburger.setAttribute('aria-expanded',String(open));
+  hamburger.setAttribute('aria-label',open?'Close menu':'Open menu');
+  menu.classList.toggle('open',open);
+  menu.setAttribute('aria-hidden',String(!open));
+}
 hamburger.addEventListener('click',()=>setMenu(!menu.classList.contains('open')));
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-const enBtn=document.getElementById('enBtn'),amBtn=document.getElementById('amBtn');
-function language(lang){document.querySelectorAll('[data-en][data-am]').forEach(e=>e.textContent=e.dataset[lang]);enBtn.classList.toggle('active',lang==='en');amBtn.classList.toggle('active',lang==='am');document.documentElement.lang=lang;localStorage.setItem('lawyerLang',lang)}
-enBtn.onclick=()=>language('en');amBtn.onclick=()=>language('am');language(localStorage.getItem('lawyerLang')||'en');
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+
+const enBtn=document.getElementById('enBtn');
+const amBtn=document.getElementById('amBtn');
+function language(lang){
+  document.querySelectorAll('[data-en][data-am]').forEach(e=>e.textContent=e.dataset[lang]);
+  enBtn.classList.toggle('active',lang==='en');
+  amBtn.classList.toggle('active',lang==='am');
+  document.documentElement.lang=lang;
+  localStorage.setItem('lawyerLang',lang);
+}
+enBtn.onclick=()=>language('en');
+amBtn.onclick=()=>language('am');
+language(localStorage.getItem('lawyerLang')||'en');
 </script>
-</body></html>
+</body>
+</html>
