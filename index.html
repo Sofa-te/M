@@ -8,149 +8,44 @@
 *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
 html,body{width:100%;overflow-x:hidden}
 body{font-family:Arial,sans-serif;background:#000;color:#fff;line-height:1.6}
-
-/* ===== HEADER ===== */
-nav{
-  position:fixed;top:0;left:0;width:100%;height:82px;z-index:2000;
-  display:flex;align-items:center;justify-content:center;
-  padding:0 28px;background:rgba(7,7,7,.97);
-  border-bottom:1px solid rgba(255,215,90,.18);backdrop-filter:blur(10px)
-}
-.logo{
-  color:#f1ca55;font-size:29px;font-weight:800;white-space:nowrap;
-  text-shadow:0 0 8px rgba(255,215,80,.25)
-}
+nav{position:fixed;top:0;left:0;width:100%;height:82px;z-index:2000;display:flex;align-items:center;justify-content:center;padding:0 28px;background:rgba(7,7,7,.97);border-bottom:1px solid rgba(255,215,90,.18);backdrop-filter:blur(10px)}
+.logo{color:#f1ca55;font-size:29px;font-weight:800;white-space:nowrap}
 nav ul{list-style:none;display:flex;align-items:center;gap:28px;margin-left:45px}
-nav a{color:#fff;text-decoration:none;font-size:16px;font-weight:700;transition:.2s}
-nav a:hover{color:#f4cf61}
-
-/* ===== HERO ===== */
-.hero{
-  min-height:520px;height:520px;margin-top:82px;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  padding:45px 20px 25px;color:#fff;
-  background:linear-gradient(rgba(0,0,0,.53),rgba(0,0,0,.64)),url("legal-background.png") center/cover no-repeat
-}
+nav a{color:#fff;text-decoration:none;font-size:16px;font-weight:700;transition:.2s}nav a:hover{color:#f4cf61}
+.hero{min-height:520px;height:520px;margin-top:82px;display:flex;align-items:center;justify-content:center;text-align:center;padding:45px 20px 25px;color:#fff;background:linear-gradient(rgba(0,0,0,.53),rgba(0,0,0,.64)),url("legal-background.png") center/cover no-repeat}
 .hero-content{max-width:820px;transform:translateY(-25px)}
-.hero h1{font-size:clamp(2.25rem,6vw,4.3rem);line-height:1.1;margin-bottom:22px}
-.hero p{font-size:clamp(1.05rem,3vw,1.4rem);margin-bottom:30px}
-.btn{
-  display:inline-block;padding:15px 34px;border-radius:9px;
-  background:linear-gradient(105deg,#c28e17 0%,#ffe27a 42%,#d6a62c 70%,#fff0a0 100%);
-  color:#090909;text-decoration:none;font-weight:800;font-size:18px;
-  box-shadow:0 5px 22px rgba(255,210,60,.25)
-}
-
-/* ===== SECTIONS ===== */
+.hero h1{font-size:clamp(2.25rem,6vw,4.3rem);line-height:1.1;margin-bottom:22px}.hero p{font-size:clamp(1.05rem,3vw,1.4rem);margin-bottom:30px}
+.btn{display:inline-block;padding:15px 34px;border-radius:9px;background:linear-gradient(105deg,#c28e17 0%,#ffe27a 42%,#d6a62c 70%,#fff0a0 100%);color:#090909;text-decoration:none;font-weight:800;font-size:18px;box-shadow:0 5px 22px rgba(255,210,60,.25)}
 section{padding:70px 7%}
-#about{
-  position:relative;isolation:isolate;overflow:hidden;text-align:center;
-  color:#f5d76e;padding:72px 7% 80px;
-  min-height:560px;
-  background-image:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.58)),url("justice-background.jpg?v=10");
-  background-size:cover;background-position:center 18%;background-repeat:no-repeat;
-}
-#about::after{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.34));
-  pointer-events:none;
-}
-#about .about{
-  position:relative;z-index:1;
-  max-width:850px;margin:auto;padding:28px 22px 34px;
-  border:1px solid rgba(245,215,110,.28);border-radius:18px;
-  background:rgba(0,0,0,.34);backdrop-filter:blur(2px);
-  box-shadow:0 0 30px rgba(0,0,0,.45),inset 0 0 24px rgba(245,215,110,.04);
-}
-.title{font-size:2.15rem;text-align:center;margin-bottom:25px}
-#about .title,.services .title{color:#f5d76e;text-shadow:0 0 7px rgba(245,215,110,.85),0 0 16px rgba(245,215,110,.3)}
-.about{max-width:850px;margin:auto}
-.about p{margin:10px 0;color:#f5d76e}
-.services{background:#000;color:#f5d76e}
-.cards{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
-.card{width:270px;padding:25px;border-radius:9px;text-align:center;background:#000;border:1px solid #f5d76e;box-shadow:0 0 12px rgba(245,215,110,.18)}
-.card h3{margin-bottom:10px;color:#f5d76e}
-.details{text-align:center;max-width:850px;margin:auto}
-.contact{background:#222;color:#fff;text-align:center}
-.contact .title{color:#dfb85a}
-.contact p{margin:10px}.contact a{color:#dfb85a;text-decoration:none}
-footer{background:#111;color:#aaa;text-align:center;padding:22px;font-size:14px}
-
-/* ===== HAMBURGER: desktop OFF ===== */
+#about{position:relative;isolation:isolate;overflow:hidden;text-align:center;color:#f5d76e;padding:72px 7% 80px;min-height:560px;background-image:linear-gradient(rgba(0,0,0,.42),rgba(0,0,0,.58)),url("justice-background.jpg?v=11");background-size:cover;background-position:center 18%;background-repeat:no-repeat}
+#about::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.34));pointer-events:none}
+#about .about{position:relative;z-index:1;max-width:850px;margin:auto;padding:28px 22px 34px;border:1px solid rgba(245,215,110,.28);border-radius:18px;background:rgba(0,0,0,.34);backdrop-filter:blur(2px);box-shadow:0 0 30px rgba(0,0,0,.45),inset 0 0 24px rgba(245,215,110,.04)}
+.title{font-size:2.15rem;text-align:center;margin-bottom:25px}#about .title,.services .title{color:#f5d76e;text-shadow:0 0 7px rgba(245,215,110,.85),0 0 16px rgba(245,215,110,.3)}
+.about{max-width:850px;margin:auto}.about p{margin:10px 0;color:#f5d76e}.services{background:#000;color:#f5d76e}.cards{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}.card{width:270px;padding:25px;border-radius:9px;text-align:center;background:#000;border:1px solid #f5d76e;box-shadow:0 0 12px rgba(245,215,110,.18)}.card h3{margin-bottom:10px;color:#f5d76e}.details{text-align:center;max-width:850px;margin:auto}.contact{background:#222;color:#fff;text-align:center}.contact .title{color:#dfb85a}.contact p{margin:10px}.contact a{color:#dfb85a;text-decoration:none}footer{background:#111;color:#aaa;text-align:center;padding:22px;font-size:14px}
 .hamburger{display:none}
 .mobile-menu,.menu-backdrop{display:none}
-
-/* ===== MOBILE ===== */
+.lang-switch{display:none}
 @media(max-width:768px){
-  nav{height:68px;padding:0 10px 0 14px;justify-content:space-between}
-  .logo{
-    font-size:17px;line-height:1;letter-spacing:-.15px;
-    max-width:calc(100% - 62px);overflow:hidden;text-overflow:clip;text-align:left;
-    flex:1;white-space:nowrap
-  }
+  nav{height:68px;padding:0 12px 0 16px;justify-content:space-between}
+  .logo{font-size:17px;line-height:1;letter-spacing:-.2px;max-width:calc(100% - 65px);overflow:hidden;text-overflow:clip;text-align:left;flex:1;white-space:nowrap}
   nav ul{display:none}
-  .hamburger{
-    display:flex;width:50px;height:50px;flex:0 0 50px;margin-left:auto;
-    border:1px solid rgba(255,220,90,.8);border-radius:9px;
-    background:linear-gradient(145deg,rgba(255,215,75,.16),rgba(0,0,0,.35));
-    align-items:center;justify-content:center;flex-direction:column;
-    cursor:pointer;z-index:2100;
-    box-shadow:0 0 8px rgba(255,210,50,.65),0 0 20px rgba(255,185,0,.3),inset 0 0 9px rgba(255,220,80,.12)
-  }
-  .hamburger span{
-    display:block;width:29px;height:3px;margin:3.5px 0;border-radius:5px;
-    background:linear-gradient(90deg,#a86f00,#fff3a5,#ffd33f,#fff5ad,#b77a00);
-    box-shadow:0 0 5px #fff2a0,0 0 12px rgba(255,205,50,.95),0 0 20px rgba(255,180,0,.55);
-    transition:transform .32s ease,opacity .25s ease
-  }
-  .hamburger.active span:nth-child(1){transform:translateY(10px) rotate(45deg)}
-  .hamburger.active span:nth-child(2){opacity:0}
-  .hamburger.active span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
-
-  /* full horizontal menu like the supplied reference */
-  .mobile-menu{
-    display:block;position:fixed;left:0;top:68px;width:100vw;height:calc(100dvh - 68px);
-    z-index:2050;overflow-y:auto;padding:18px 18px 30px;
-    background:linear-gradient(180deg,#080808 0%,#101010 55%,#050505 100%);
-    border-top:1px solid rgba(255,215,75,.4);
-    transform:translateX(100%);transition:transform .38s cubic-bezier(.22,.8,.2,1)
-  }
-  .mobile-menu.open{transform:translateX(0)}
-  .menu-title{text-align:center;color:#ffe477;font-size:20px;font-weight:800;text-shadow:0 0 12px rgba(255,210,60,.6)}
-  .menu-line{height:1px;margin:12px 0;background:linear-gradient(90deg,transparent,#ffe477,#b67b08,transparent)}
-  .mobile-menu a{
-    display:flex;align-items:center;width:100%;min-height:57px;padding:14px 12px;
-    color:#fff;text-decoration:none;font-size:18px;font-weight:700;
-    border-bottom:1px solid rgba(255,215,80,.16)
-  }
-  .mobile-menu a:active{background:rgba(255,210,55,.08);color:#ffe477}
-  .menu-icon{width:38px;color:#ffd43f;font-size:22px;text-shadow:0 0 10px rgba(255,210,50,.8)}
-  .book-link{
-    margin-top:20px;justify-content:center;border:1px solid #ffe477!important;border-radius:9px;
-    background:linear-gradient(100deg,#c18b15,#ffe477,#d5a52a)!important;color:#080808!important;
-    box-shadow:0 0 16px rgba(255,210,55,.45),inset 0 1px 0 rgba(255,255,255,.55)
-  }
-  .book-link .menu-icon{color:#080808;text-shadow:none}
-  .menu-footer{text-align:center;color:#888;font-size:12px;padding-top:22px}
-  .menu-backdrop{
-    display:block;position:fixed;inset:0;z-index:2040;background:rgba(0,0,0,.55);
-    opacity:0;visibility:hidden;transition:.3s
-  }
-  .menu-backdrop.show{opacity:1;visibility:visible}
-  body.menu-open{overflow:hidden}
-
-  .hero{margin-top:68px;height:500px;min-height:500px;padding:30px 18px 20px}
-  .hero-content{transform:translateY(-55px)}
-  .hero h1{font-size:2.35rem;margin-bottom:18px}
-  .hero p{font-size:1.08rem;margin-bottom:25px}
-  .btn{font-size:17px;padding:14px 28px}
-  #about{
-    padding:42px 18px 52px;min-height:560px;
-    background-position:center 16%;
-  }
-  #about .title{margin-bottom:22px;font-size:2.2rem}
-  #about .about{padding:24px 16px 28px;background:rgba(0,0,0,.38)}
-  section{padding-left:20px;padding-right:20px}
+  .hamburger{display:flex;width:50px;height:50px;flex:0 0 50px;margin-left:auto;border:1px solid rgba(255,220,90,.8);border-radius:11px;background:#292929;align-items:center;justify-content:center;flex-direction:column;cursor:pointer;z-index:2100;box-shadow:0 0 9px rgba(255,210,50,.65),0 0 22px rgba(255,185,0,.22),inset 0 0 9px rgba(255,220,80,.12)}
+  .hamburger span{display:block;width:29px;height:3px;margin:3.5px 0;border-radius:5px;background:linear-gradient(90deg,#b57a00,#fff4a8,#ffd43d,#fff5ad,#b57a00);box-shadow:0 0 5px #fff2a0,0 0 12px rgba(255,205,50,.95);transition:transform .32s ease,opacity .25s ease}
+  .hamburger.active span:nth-child(1){transform:translateY(10px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}
+  /* Gray half-screen drop-down menu */
+  .mobile-menu{display:block;position:fixed;left:0;top:68px;width:100%;height:56vh;max-height:620px;z-index:2050;overflow-y:auto;padding:14px 18px 22px;background:linear-gradient(180deg,#3a3a3a 0%,#303030 55%,#292929 100%);border-top:1px solid rgba(255,215,75,.48);border-bottom:1px solid rgba(255,215,75,.28);box-shadow:0 22px 45px rgba(0,0,0,.62),inset 0 1px 0 rgba(255,255,255,.06);transform:translateY(-110%);transition:transform .48s cubic-bezier(.18,.82,.22,1)}
+  .mobile-menu.open{transform:translateY(0)}
+  .menu-handle{width:54px;height:5px;border-radius:20px;margin:1px auto 12px;background:linear-gradient(90deg,#a86f00,#fff3a2,#ffd43e,#fff3a2,#a86f00);box-shadow:0 0 10px rgba(255,215,70,.9)}
+  .menu-title{display:flex;align-items:center;justify-content:center;gap:10px;color:#fff1a0;font-size:20px;font-weight:800;text-align:center;text-shadow:0 0 12px rgba(255,210,60,.5);padding:4px 0 8px}
+  .menu-line{height:1px;margin:4px 0 7px;background:linear-gradient(90deg,transparent,#f3cf55,transparent)}
+  .mobile-menu a{display:flex;align-items:center;min-height:55px;padding:10px 8px;color:#fff;text-decoration:none;font-size:18px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.12);transition:.2s}
+  .mobile-menu a:active{background:rgba(255,215,70,.09);color:#ffe477}.menu-icon{width:40px;color:#ffd43f;font-size:22px;text-shadow:0 0 10px rgba(255,210,50,.85)}
+  .book-link{margin-top:14px;justify-content:center;border:1px solid #ffe477!important;border-radius:10px;background:linear-gradient(100deg,#c18b15,#ffe477,#d5a52a)!important;color:#080808!important;box-shadow:0 0 17px rgba(255,210,55,.42)}.book-link .menu-icon{color:#080808;text-shadow:none}
+  .language-box{display:flex;align-items:center;justify-content:center;gap:8px;margin:16px auto 5px;padding:5px;width:max-content;border:1px solid rgba(255,220,90,.35);border-radius:30px;background:#252525}.language-box button{min-width:86px;border:0;border-radius:22px;padding:9px 18px;background:transparent;color:#ddd;font-weight:800;font-size:14px;cursor:pointer}.language-box button.active{background:linear-gradient(100deg,#c18b15,#ffe477,#d5a52a);color:#111;box-shadow:0 0 12px rgba(255,210,55,.35)}
+  .menu-footer{text-align:center;color:#c2c2c2;font-size:12px;padding-top:8px;line-height:1.6}
+  .menu-backdrop{display:block;position:fixed;inset:0;z-index:2040;background:rgba(0,0,0,.38);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:.3s}.menu-backdrop.show{opacity:1;visibility:visible}body.menu-open{overflow:hidden}
+  .hero{margin-top:68px;height:500px;min-height:500px;padding:30px 18px 20px}.hero-content{transform:translateY(-55px)}.hero h1{font-size:2.35rem;margin-bottom:18px}.hero p{font-size:1.08rem;margin-bottom:25px}.btn{font-size:17px;padding:14px 28px}
+  #about{padding:42px 18px 52px;min-height:560px;background-position:center 16%}#about .title{margin-bottom:22px;font-size:2.2rem}#about .about{padding:24px 16px 28px;background:rgba(0,0,0,.38)}section{padding-left:20px;padding-right:20px}
 }
 </style>
 </head>
@@ -158,83 +53,62 @@ footer{background:#111;color:#aaa;text-align:center;padding:22px;font-size:14px}
 <nav>
   <div class="logo">Lawyer Mohammed Ahmed Eshetu</div>
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#details">Details</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="appointment.html">Book Appointment</a></li>
+    <li><a href="#home" data-en="Home" data-am="መነሻ">Home</a></li><li><a href="#about" data-en="About" data-am="ስለ እኛ">About</a></li><li><a href="#details" data-en="Details" data-am="ዝርዝር">Details</a></li><li><a href="#contact" data-en="Contact" data-am="ያግኙን">Contact</a></li><li><a href="appointment.html" data-en="Book Appointment" data-am="ቀጠሮ ይያዙ">Book Appointment</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
 <section id="home" class="hero">
   <div class="hero-content">
-    <h1>Professional Legal Services</h1>
-    <p>Trusted legal advice and professional representation for your needs.</p>
-    <a class="btn" href="appointment.html">Book an Appointment</a>
+    <h1 data-en="Professional Legal Services" data-am="የሙያ የሕግ አገልግሎቶች">Professional Legal Services</h1>
+    <p data-en="Trusted legal advice and professional representation for your needs." data-am="ታማኝ የሕግ ምክር እና ሙያዊ ውክልና ለፍላጎትዎ።">Trusted legal advice and professional representation for your needs.</p>
+    <a class="btn" href="appointment.html" data-en="Book an Appointment" data-am="ቀጠሮ ይያዙ">Book an Appointment</a>
   </div>
 </section>
 
 <section id="about">
-  <h2 class="title">About Us</h2>
+  <h2 class="title" data-en="About Us" data-am="ስለ እኛ">About Us</h2>
   <div class="about">
-    <p><strong>Mohammed Ahmed Eshetu</strong></p>
-    <p><strong>LLB, LLM</strong></p>
-    <p><strong>Consultant and Attorney at Law</strong></p>
-    <p>Professional legal consultation, advice and representation with integrity, confidentiality and dedication.</p>
+    <p><strong>Mohammed Ahmed Eshetu</strong></p><p><strong>LLB, LLM</strong></p><p><strong data-en="Consultant and Attorney at Law" data-am="የሕግ አማካሪ እና ጠበቃ">Consultant and Attorney at Law</strong></p>
+    <p data-en="Professional legal consultation, advice and representation with integrity, confidentiality and dedication." data-am="በታማኝነት፣ በምስጢራዊነት እና በትጋት የሚሰጥ ሙያዊ የሕግ ምክር፣ ምክክር እና ውክልና።">Professional legal consultation, advice and representation with integrity, confidentiality and dedication.</p>
   </div>
 </section>
 
-<section class="services">
-  <h2 class="title">Legal Services</h2>
-  <div class="cards">
-    <div class="card"><h3>Experienced Advice</h3><p>Clear and practical legal guidance for individuals and businesses.</p></div>
-    <div class="card"><h3>Trusted Service</h3><p>Professional support focused on your rights and interests.</p></div>
-    <div class="card"><h3>Legal Representation</h3><p>Dedicated representation and assistance throughout your legal matter.</p></div>
-  </div>
-</section>
+<section class="services"><h2 class="title" data-en="Legal Services" data-am="የሕግ አገልግሎቶች">Legal Services</h2><div class="cards">
+  <div class="card"><h3 data-en="Experienced Advice" data-am="ልምድ ያለው ምክር">Experienced Advice</h3><p data-en="Clear and practical legal guidance for individuals and businesses." data-am="ለግለሰቦች እና ለንግዶች ግልጽ እና ተግባራዊ የሕግ መመሪያ።">Clear and practical legal guidance for individuals and businesses.</p></div>
+  <div class="card"><h3 data-en="Trusted Service" data-am="ታማኝ አገልግሎት">Trusted Service</h3><p data-en="Professional support focused on your rights and interests." data-am="በመብቶችዎ እና ጥቅሞችዎ ላይ ያተኮረ ሙያዊ ድጋፍ።">Professional support focused on your rights and interests.</p></div>
+  <div class="card"><h3 data-en="Legal Representation" data-am="የሕግ ውክልና">Legal Representation</h3><p data-en="Dedicated representation and assistance throughout your legal matter." data-am="በሕጋዊ ጉዳይዎ ሁሉ የተሟላ ውክልና እና ድጋፍ።">Dedicated representation and assistance throughout your legal matter.</p></div>
+</div></section>
 
-<section id="details">
-  <h2 class="title">Details</h2>
-  <div class="details">
-    <p><strong>Name:</strong> Mohammed Ahmed Eshetu</p>
-    <p><strong>Qualification:</strong> LLB, LLM</p>
-    <p><strong>Profession:</strong> Consultant and Attorney at Law</p>
-    <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
-    <p>Professional legal consultation, advice and representation.</p>
-  </div>
-</section>
+<section id="details"><h2 class="title" data-en="Details" data-am="ዝርዝር">Details</h2><div class="details">
+<p><strong data-en="Name:" data-am="ስም፦">Name:</strong> Mohammed Ahmed Eshetu</p><p><strong data-en="Qualification:" data-am="ትምህርት፦">Qualification:</strong> LLB, LLM</p><p><strong data-en="Profession:" data-am="ሙያ፦">Profession:</strong> <span data-en="Consultant and Attorney at Law" data-am="የሕግ አማካሪ እና ጠበቃ">Consultant and Attorney at Law</span></p><p><strong data-en="Location:" data-am="አድራሻ፦">Location:</strong> Addis Ababa, Ethiopia</p><p data-en="Professional legal consultation, advice and representation." data-am="ሙያዊ የሕግ ምክር፣ ምክክር እና ውክልና።">Professional legal consultation, advice and representation.</p>
+</div></section>
 
-<section id="contact" class="contact">
-  <h2 class="title">Contact</h2>
-  <p>Email: <a href="mailto:muhe.dcst62@gmail.com">muhe.dcst62@gmail.com</a></p>
-  <p>Phone: <a href="tel:+251912704173">0912-704173</a></p>
-  <p>Phone: <a href="tel:+251977602663">0977-602663</a></p>
-  <p>Address: Addis Ababa, Ethiopia</p>
-</section>
+<section id="contact" class="contact"><h2 class="title" data-en="Contact" data-am="ያግኙን">Contact</h2><p>Email: <a href="mailto:muhe.dcst62@gmail.com">muhe.dcst62@gmail.com</a></p><p>Phone: <a href="tel:+251912704173">0912-704173</a></p><p>Phone: <a href="tel:+251977602663">0977-602663</a></p><p data-en="Address: Addis Ababa, Ethiopia" data-am="አድራሻ፦ አዲስ አበባ፣ ኢትዮጵያ">Address: Addis Ababa, Ethiopia</p></section>
 <footer>© 2026 Mohammed Ahmed Eshetu — Consultant and Attorney at Law. All rights reserved.</footer>
 
 <div class="menu-backdrop" id="menuBackdrop"></div>
 <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-  <div class="menu-title">Lawyer Mohammed Ahmed Eshetu</div>
+  <div class="menu-handle"></div>
+  <div class="menu-title">⚖ <span>Lawyer Mohammed Ahmed Eshetu</span></div>
   <div class="menu-line"></div>
-  <a href="#home"><span class="menu-icon">⌂</span>Home</a>
-  <a href="#about"><span class="menu-icon">♙</span>About</a>
-  <a href="#details"><span class="menu-icon">✦</span>Details</a>
-  <a href="#contact"><span class="menu-icon">☎</span>Contact</a>
-  <a class="book-link" href="appointment.html"><span class="menu-icon">▣</span>Book Appointment</a>
-  <div class="menu-footer">LLB, LLM • Consultant and Attorney at Law<br>Professional Legal Services</div>
+  <a href="#home"><span class="menu-icon">⌂</span><span data-en="Home" data-am="መነሻ">Home</span></a>
+  <a href="#about"><span class="menu-icon">♙</span><span data-en="About" data-am="ስለ እኛ">About</span></a>
+  <a href="#details"><span class="menu-icon">✦</span><span data-en="Details" data-am="ዝርዝር">Details</span></a>
+  <a href="#contact"><span class="menu-icon">☎</span><span data-en="Contact" data-am="ያግኙን">Contact</span></a>
+  <a class="book-link" href="appointment.html"><span class="menu-icon">▣</span><span data-en="Book Appointment" data-am="ቀጠሮ ይያዙ">Book Appointment</span></a>
+  <div class="language-box" aria-label="Language selection"><button id="enBtn" class="active" type="button">EN</button><button id="amBtn" type="button">አማ</button></div>
+  <div class="menu-footer" data-en="LLB, LLM • Consultant and Attorney at Law" data-am="LLB, LLM • የሕግ አማካሪ እና ጠበቃ">LLB, LLM • Consultant and Attorney at Law</div>
 </aside>
 
 <script>
-const btn=document.getElementById('hamburger');
-const menu=document.getElementById('mobileMenu');
-const backdrop=document.getElementById('menuBackdrop');
+const btn=document.getElementById('hamburger'),menu=document.getElementById('mobileMenu'),backdrop=document.getElementById('menuBackdrop');
 function closeMenu(){btn.classList.remove('active');btn.setAttribute('aria-expanded','false');menu.classList.remove('open');menu.setAttribute('aria-hidden','true');backdrop.classList.remove('show');document.body.classList.remove('menu-open')}
 function toggleMenu(){const open=!menu.classList.contains('open');btn.classList.toggle('active',open);btn.setAttribute('aria-expanded',open);menu.classList.toggle('open',open);menu.setAttribute('aria-hidden',!open);backdrop.classList.toggle('show',open);document.body.classList.toggle('menu-open',open)}
 btn.addEventListener('click',toggleMenu);backdrop.addEventListener('click',closeMenu);menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+const enBtn=document.getElementById('enBtn'),amBtn=document.getElementById('amBtn');
+function setLanguage(lang){document.documentElement.lang=lang==='am'?'am':'en';document.querySelectorAll('[data-en][data-am]').forEach(el=>{el.textContent=el.dataset[lang==='am'?'am':'en']});enBtn.classList.toggle('active',lang==='en');amBtn.classList.toggle('active',lang==='am');localStorage.setItem('siteLang',lang)}
+enBtn.addEventListener('click',()=>setLanguage('en'));amBtn.addEventListener('click',()=>setLanguage('am'));setLanguage(localStorage.getItem('siteLang')||'en');
 </script>
 </body>
 </html>
